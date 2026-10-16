@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Studio Ghibli Films</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="icon" type="image/png" href="PICTURES/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="PICTURES/favicon.svg" />
+    <link rel="shortcut icon" href="PICTURES/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="PICTURES/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="GhibliWeb" />
+    <link rel="manifest" href="PICTURES/site.webmanifest" />
+</head>
+
+<body>
+    <div id="container">
+        <main>
+
+            <section class="intro films-intro">
+                <h2>Celebrate the Magic of Studio Ghibli</h2>
+                <h2>Studio Ghibli Classics</h2>
+                <p>Step into worlds of wonder, imagination, and timeless storytelling. From the forests of Princess Mononoke to the skies of Castle in the Sky, Studio Ghibli masterworks transcend time and away. Studio Ghibli films continue to inspire audiences across generations.</p>
+                <p>Experience the imagination on the big screen, or stream them at home. Our classics are returning to cinemas for special anniversary screenings.</p>
+                <a href="https://www.madman.com.au/" class="ticket-btn" target="_blank">Buy Cinema Tickets and Digital Copies!</a>
+            </section>
+
+            <nav class="subnav" aria-label="Film Navigation Links">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="merchandise.html">Merchandise Shop</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="films.html">Studio Ghibli Films</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </nav>
+
+            <section class="film-gallery">
+                <div class="film-item">
+                    <a href="#" aria-label="Spirited Away Film Details" class="film-poster-link">
+                        <img src="PICTURES/spiritedAway.png" alt="Spirited Away Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="1">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-1" name="rating-1" value="5" /><label for="star5-1" title="5 Stars"></label>
+                                <input type="radio" id="star4-1" name="rating-1" value="4" /><label for="star4-1" title="4 Stars"></label>
+                                <input type="radio" id="star3-1" name="rating-1" value="3" /><label for="star3-1" title="3 Stars"></label>
+                                <input type="radio" id="star2-1" name="rating-1" value="2" /><label for="star2-1" title="2 Stars"></label>
+                                <input type="radio" id="star1-1" name="rating-1" value="1" /><label for="star1-1" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="Earwig and the Witch Film Details" class="film-poster-link">
+                        <img src="PICTURES/earwigAndTheWitch.png" alt="Earwig and the Witch Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="2">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-2" name="rating-2" value="5" /><label for="star5-2" title="5 Stars"></label>
+                                <input type="radio" id="star4-2" name="rating-2" value="4" /><label for="star4-2" title="4 Stars"></label>
+                                <input type="radio" id="star3-2" name="rating-2" value="3" /><label for="star3-2" title="3 Stars"></label>
+                                <input type="radio" id="star2-2" name="rating-2" value="2" /><label for="star2-2" title="2 Stars"></label>
+                                <input type="radio" id="star1-2" name="rating-2" value="1" /><label for="star1-2" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="My Neighbor Totoro Film Details" class="film-poster-link">
+                        <img src="PICTURES/myNeighborTotoro.png" alt="My Neighbor Totoro Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="3">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-3" name="rating-3" value="5" /><label for="star5-3" title="5 Stars"></label>
+                                <input type="radio" id="star4-3" name="rating-3" value="4" /><label for="star4-3" title="4 Stars"></label>
+                                <input type="radio" id="star3-3" name="rating-3" value="3" /><label for="star3-3" title="3 Stars"></label>
+                                <input type="radio" id="star2-3" name="rating-3" value="2" /><label for="star2-3" title="2 Stars"></label>
+                                <input type="radio" id="star1-3" name="rating-3" value="1" /><label for="star1-3" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="Princess Mononoke Film Details" class="film-poster-link">
+                        <img src="PICTURES/princessMononoke.png" alt="Princess Mononoke Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="4">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-4" name="rating-4" value="5" /><label for="star5-4" title="5 Stars"></label>
+                                <input type="radio" id="star4-4" name="rating-4" value="4" /><label for="star4-4" title="4 Stars"></label>
+                                <input type="radio" id="star3-4" name="rating-4" value="3" /><label for="star3-4" title="3 Stars"></label>
+                                <input type="radio" id="star2-4" name="rating-4" value="2" /><label for="star2-4" title="2 Stars"></label>
+                                <input type="radio" id="star1-4" name="rating-4" value="1" /><label for="star1-4" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="Ponyo Film Details" class="film-poster-link">
+                        <img src="PICTURES/ponyo.png" alt="Ponyo Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="5">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-5" name="rating-5" value="5" /><label for="star5-5" title="5 Stars"></label>
+                                <input type="radio" id="star4-5" name="rating-5" value="4" /><label for="star4-5" title="4 Stars"></label>
+                                <input type="radio" id="star3-5" name="rating-5" value="3" /><label for="star3-5" title="3 Stars"></label>
+                                <input type="radio" id="star2-5" name="rating-5" value="2" /><label for="star2-5" title="2 Stars"></label>
+                                <input type="radio" id="star1-5" name="rating-5" value="1" /><label for="star1-5" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="film-item">
+                    <a href="#" aria-label="Howl's Moving Castle Film Details" class="film-poster-link">
+                        <img src="PICTURES/howlsMovingCastle.png" alt="Howl's Moving Castle Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="6">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-6" name="rating-6" value="5" /><label for="star5-6" title="5 Stars"></label>
+                                <input type="radio" id="star4-6" name="rating-6" value="4" /><label for="star4-6" title="4 Stars"></label>
+                                <input type="radio" id="star3-6" name="rating-6" value="3" /><label for="star3-6" title="3 Stars"></label>
+                                <input type="radio" id="star2-6" name="rating-6" value="2" /><label for="star2-6" title="2 Stars"></label>
+                                <input type="radio" id="star1-6" name="rating-6" value="1" /><label for="star1-6" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="Castle in the Sky Film Details" class="film-poster-link">
+                        <img src="PICTURES/laputa.png" alt="Castle in the Sky Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="7">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-7" name="rating-7" value="5" /><label for="star5-7" title="5 Stars"></label>
+                                <input type="radio" id="star4-7" name="rating-7" value="4" /><label for="star4-7" title="4 Stars"></label>
+                                <input type="radio" id="star3-7" name="rating-7" value="3" /><label for="star3-7" title="3 Stars"></label>
+                                <input type="radio" id="star2-7" name="rating-7" value="2" /><label for="star2-7" title="2 Stars"></label>
+                                <input type="radio" id="star1-7" name="rating-7" value="1" /><label for="star1-7" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="film-item">
+                    <a href="#" aria-label="Porco Rosso Film Details" class="film-poster-link">
+                        <img src="PICTURES/porcoRosso.png" alt="Porco Rosso Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="8">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-8" name="rating-8" value="5" /><label for="star5-8" title="5 Stars"></label>
+                                <input type="radio" id="star4-8" name="rating-8" value="4" /><label for="star4-8" title="4 Stars"></label>
+                                <input type="radio" id="star3-8" name="rating-8" value="3" /><label for="star3-8" title="3 Stars"></label>
+                                <input type="radio" id="star2-8" name="rating-8" value="2" /><label for="star2-8" title="2 Stars"></label>
+                                <input type="radio" id="star1-8" name="rating-8" value="1" /><label for="star1-8" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="Nausicaä of the Valley of the Wind Film Details" class="film-poster-link">
+                        <img src="PICTURES/nausicca.png" alt="Nausicaä of the Valley of the Wind Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="9">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-9" name="rating-9" value="5" /><label for="star5-9" title="5 Stars"></label>
+                                <input type="radio" id="star4-9" name="rating-9" value="4" /><label for="star4-9" title="4 Stars"></label>
+                                <input type="radio" id="star3-9" name="rating-9" value="3" /><label for="star3-9" title="3 Stars"></label>
+                                <input type="radio" id="star2-9" name="rating-9" value="2" /><label for="star2-9" title="2 Stars"></label>
+                                <input type="radio" id="star1-9" name="rating-9" value="1" /><label for="star1-9" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="The Tale of the Princess Kaguya Film Details" class="film-poster-link">
+                        <img src="PICTURES/thePrincessKaguya.png" alt="The Tale of the Princess Kaguya Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="10">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-10" name="rating-10" value="5" /><label for="star5-10" title="5 Stars"></label>
+                                <input type="radio" id="star4-10" name="rating-10" value="4" /><label for="star4-10" title="4 Stars"></label>
+                                <input type="radio" id="star3-10" name="rating-10" value="3" /><label for="star3-10" title="3 Stars"></label>
+                                <input type="radio" id="star2-10" name="rating-10" value="2" /><label for="star2-10" title="2 Stars"></label>
+                                <input type="radio" id="star1-10" name="rating-10" value="1" /><label for="star1-10" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="The Kingdom of Dreams and Madness Film Details" class="film-poster-link">
+                        <img src="PICTURES/kingdomOfDreams.png" alt="The Kingdom of Dreams and Madness Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="11">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-11" name="rating-11" value="5" /><label for="star5-11" title="5 Stars"></label>
+                                <input type="radio" id="star4-11" name="rating-11" value="4" /><label for="star4-11" title="4 Stars"></label>
+                                <input type="radio" id="star3-11" name="rating-11" value="3" /><label for="star3-11" title="3 Stars"></label>
+                                <input type="radio" id="star2-11" name="rating-11" value="2" /><label for="star2-11" title="2 Stars"></label>
+                                <input type="radio" id="star1-11" name="rating-11" value="1" /><label for="star1-11" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="film-item">
+                    <a href="#" aria-label="My Neighbors the Yamadas Film Details" class="film-poster-link">
+                        <img src="PICTURES/myNeighborsTheYamada.png" alt="My Neighbors the Yamadas Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="12">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-12" name="rating-12" value="5" /><label for="star5-12" title="5 Stars"></label>
+                                <input type="radio" id="star4-12" name="rating-12" value="4" /><label for="star4-12" title="4 Stars"></label>
+                                <input type="radio" id="star3-12" name="rating-12" value="3" /><label for="star3-12" title="3 Stars"></label>
+                                <input type="radio" id="star2-12" name="rating-12" value="2" /><label for="star2-12" title="2 Stars"></label>
+                                <input type="radio" id="star1-12" name="rating-12" value="1" /><label for="star1-12" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="Kiki's Delivery Service Film Details" class="film-poster-link">
+                        <img src="PICTURES/kikisDeliveryService.png" alt="Kiki's Delivery Service Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="13">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-13" name="rating-13" value="5" /><label for="star5-13" title="5 Stars"></label>
+                                <input type="radio" id="star4-13" name="rating-13" value="4" /><label for="star4-13" title="4 Stars"></label>
+                                <input type="radio" id="star3-13" name="rating-13" value="3" /><label for="star3-13" title="3 Stars"></label>
+                                <input type="radio" id="star2-13" name="rating-13" value="2" /><label for="star2-13" title="2 Stars"></label>
+                                <input type="radio" id="star1-13" name="rating-13" value="1" /><label for="star1-13" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="When Marnie Was There Film Details" class="film-poster-link">
+                        <img src="PICTURES/whenMarnieWasThere.png" alt="When Marnie Was There Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="14">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-14" name="rating-14" value="5" /><label for="star5-14" title="5 Stars"></label>
+                                <input type="radio" id="star4-14" name="rating-14" value="4" /><label for="star4-14" title="4 Stars"></label>
+                                <input type="radio" id="star3-14" name="rating-14" value="3" /><label for="star3-14" title="3 Stars"></label>
+                                <input type="radio" id="star2-14" name="rating-14" value="2" /><label for="star2-14" title="2 Stars"></label>
+                                <input type="radio" id="star1-14" name="rating-14" value="1" /><label for="star1-14" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="Whisper of the Heart Film Details" class="film-poster-link">
+                        <img src="PICTURES/whisperOfTheHeart.png" alt="Whisper of the Heart Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="15">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-15" name="rating-15" value="5" /><label for="star5-15" title="5 Stars"></label>
+                                <input type="radio" id="star4-15" name="rating-15" value="4" /><label for="star4-15" title="4 Stars"></label>
+                                <input type="radio" id="star3-15" name="rating-15" value="3" /><label for="star3-15" title="3 Stars"></label>
+                                <input type="radio" id="star2-15" name="rating-15" value="2" /><label for="star2-15" title="2 Stars"></label>
+                                <input type="radio" id="star1-15" name="rating-15" value="1" /><label for="star1-15" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="film-item">
+                    <a href="#" aria-label="The Wind Rises Film Details" class="film-poster-link">
+                        <img src="PICTURES/theWindRises.png" alt="The Wind Rises Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="16">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-16" name="rating-16" value="5" /><label for="star5-16" title="5 Stars"></label>
+                                <input type="radio" id="star4-16" name="rating-16" value="4" /><label for="star4-16" title="4 Stars"></label>
+                                <input type="radio" id="star3-16" name="rating-16" value="3" /><label for="star3-16" title="3 Stars"></label>
+                                <input type="radio" id="star2-16" name="rating-16" value="2" /><label for="star2-16" title="2 Stars"></label>
+                                <input type="radio" id="star1-16" name="rating-16" value="1" /><label for="star1-16" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="Tales from Earthsea Film Details" class="film-poster-link">
+                        <img src="PICTURES/talesFromEarthsea.png" alt="Tales from Earthsea Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="17">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-17" name="rating-17" value="5" /><label for="star5-17" title="5 Stars"></label>
+                                <input type="radio" id="star4-17" name="rating-17" value="4" /><label for="star4-17" title="4 Stars"></label>
+                                <input type="radio" id="star3-17" name="rating-17" value="3" /><label for="star3-17" title="3 Stars"></label>
+                                <input type="radio" id="star2-17" name="rating-17" value="2" /><label for="star2-17" title="2 Stars"></label>
+                                <input type="radio" id="star1-17" name="rating-17" value="1" /><label for="star1-17" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="Ocean Waves Film Details" class="film-poster-link">
+                        <img src="PICTURES/oceanWaves.png" alt="Ocean Waves Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="18">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-18" name="rating-18" value="5" /><label for="star5-18" title="5 Stars"></label>
+                                <input type="radio" id="star4-18" name="rating-18" value="4" /><label for="star4-18" title="4 Stars"></label>
+                                <input type="radio" id="star3-18" name="rating-18" value="3" /><label for="star3-18" title="3 Stars"></label>
+                                <input type="radio" id="star2-18" name="rating-18" value="2" /><label for="star2-18" title="2 Stars"></label>
+                                <input type="radio" id="star1-18" name="rating-18" value="1" /><label for="star1-18" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="From Up on Poppy Hill Film Details" class="film-poster-link">
+                        <img src="PICTURES/fromUpOnHill.png" alt="From Up on Poppy Hill Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="19">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-19" name="rating-19" value="5" /><label for="star5-19" title="5 Stars"></label>
+                                <input type="radio" id="star4-19" name="rating-19" value="4" /><label for="star4-19" title="4 Stars"></label>
+                                <input type="radio" id="star3-19" name="rating-19" value="3" /><label for="star3-19" title="3 Stars"></label>
+                                <input type="radio" id="star2-19" name="rating-19" value="2" /><label for="star2-19" title="2 Stars"></label>
+                                <input type="radio" id="star1-19" name="rating-19" value="1" /><label for="star1-19" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="The Secret World of Arrietty Film Details" class="film-poster-link">
+                        <img src="PICTURES/arrietty.png" alt="The Secret World of Arrietty Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="20">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-20" name="rating-20" value="5" /><label for="star5-20" title="5 Stars"></label>
+                                <input type="radio" id="star4-20" name="rating-20" value="4" /><label for="star4-20" title="4 Stars"></label>
+                                <input type="radio" id="star3-20" name="rating-20" value="3" /><label for="star3-20" title="3 Stars"></label>
+                                <input type="radio" id="star2-20" name="rating-20" value="2" /><label for="star2-20" title="2 Stars"></label>
+                                <input type="radio" id="star1-20" name="rating-20" value="1" /><label for="star1-20" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="film-item">
+                    <a href="#" aria-label="Only Yesterday Film Details" class="film-poster-link">
+                        <img src="PICTURES/onlyYesterday.png" alt="Only Yesterday Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="21">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-21" name="rating-21" value="5" /><label for="star5-21" title="5 Stars"></label>
+                                <input type="radio" id="star4-21" name="rating-21" value="4" /><label for="star4-21" title="4 Stars"></label>
+                                <input type="radio" id="star3-21" name="rating-21" value="3" /><label for="star3-21" title="3 Stars"></label>
+                                <input type="radio" id="star2-21" name="rating-21" value="2" /><label for="star2-21" title="2 Stars"></label>
+                                <input type="radio" id="star1-21" name="rating-21" value="1" /><label for="star1-21" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="The Cat Returns Film Details" class="film-poster-link">
+                        <img src="PICTURES/theCatReturns.png" alt="The Cat Returns Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="22">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-22" name="rating-22" value="5" /><label for="star5-22" title="5 Stars"></label>
+                                <input type="radio" id="star4-22" name="rating-22" value="4" /><label for="star4-22" title="4 Stars"></label>
+                                <input type="radio" id="star3-22" name="rating-22" value="3" /><label for="star3-22" title="3 Stars"></label>
+                                <input type="radio" id="star2-22" name="rating-22" value="2" /><label for="star2-22" title="2 Stars"></label>
+                                <input type="radio" id="star1-22" name="rating-22" value="1" /><label for="star1-22" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="film-item">
+                    <a href="#" aria-label="Grave of the Fireflies Film Details" class="film-poster-link">
+                        <img src="PICTURES/graveOfTheFireflies.png" alt="Grave of the Fireflies Poster">
+                    </a>
+                    <div class="rating-overlay">
+                        <form class="rating-form" data-movie-id="23">
+                            <p>Rate this film:</p>
+                            <div class="stars">
+                                <input type="radio" id="star5-23" name="rating-23" value="5" /><label for="star5-23" title="5 Stars"></label>
+                                <input type="radio" id="star4-23" name="rating-23" value="4" /><label for="star4-23" title="4 Stars"></label>
+                                <input type="radio" id="star3-23" name="rating-23" value="3" /><label for="star3-23" title="3 Stars"></label>
+                                <input type="radio" id="star2-23" name="rating-23" value="2" /><label for="star2-23" title="2 Stars"></label>
+                                <input type="radio" id="star1-23" name="rating-23" value="1" /><label for="star1-23" title="1 Star"></label>
+                            </div>
+                            <button type="button" class="submit-rating-btn">Submit Rating</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div style="visibility: hidden;"></div> 
+            </section>
+        </main>
+
+        <footer>
+            <div class="watermark-footer">
+                <img src="PICTURES/watermark.png" alt="Studio Ghibli Watermark">
+            </div>
+
+            <div class="footer-links">
+                <p>0900 - 999 - 9999</p> 
+                <p>@StudioGhibliWeb</p>
+                
+                <p>WD-202 | Dumas, Kitt Angelu P.</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/login/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/account" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com/i/flow/login" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a> 
+                </div>
+            </div>
+            <p>&copy; 2025 Studio Ghibli. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // *** SIMULATED USER LOGIN STATE ***
+        const isUserLoggedIn = false; 
+        
+        const ratingButtons = document.querySelectorAll('.submit-rating-btn');
+        const loginPageUrl = "login.html"; 
+
+        ratingButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                
+                const form = button.closest('.rating-form');
+
+                if (!isUserLoggedIn) {
+                    // --- USER IS NOT LOGGED IN: PROMPT AND REDIRECT ---
+                    const confirmed = confirm("You must be signed in to submit a rating. Would you like to sign in now?");
+                    
+                    if (confirmed) {
+                        window.location.href = loginPageUrl;
+                    }
+                } else {
+                    // --- USER IS LOGGED IN: SUBMIT RATING (Simulated) ---
+                    
+                    const selectedRating = form.querySelector('input[type="radio"]:checked');
+                    
+                    if (selectedRating) {
+                        const movieId = form.getAttribute('data-movie-id');
+                        const ratingValue = selectedRating.value;
+
+                        alert(`Thank you! You rated Movie ID ${movieId} (${ratingValue} Stars).`);
+                        
+                        form.closest('.rating-overlay').style.opacity = '0';
+                        form.closest('.rating-overlay').style.visibility = 'hidden';
+
+                    } else {
+                        alert("Please select a star rating before submitting.");
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

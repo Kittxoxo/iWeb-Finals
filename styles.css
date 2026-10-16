@@ -1,0 +1,1867 @@
+/* Author: Dumas, Kitt Angelu P.
+Section: WD-202
+Date: October 19, 2025
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Francois+One&family=Roboto+Slab:wght@300&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'); 
+
+
+/* ==============================
+   GLOBAL STYLES
+   ============================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    background-color: #ffffff; 
+    background-image: none; 
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: repeat;
+    color: #2c2c2c;
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    letter-spacing: 1px;
+}
+
+/* ==============================
+   HERO SECTION (INDEX PAGE)
+   ============================== */
+#hero {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 -100px 50px -50px #3B2F2F; 
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300; 
+    letter-spacing: 6px; 
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-text h1 {
+    font-size: 3.2rem;
+    margin: 0;
+    line-height: 1.1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -45%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* ==============================
+   HERO SLIDER (INDEX PAGE ONLY)
+   ============================== */
+.hero-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    overflow: hidden;
+    z-index: -1; 
+}
+
+.hero-slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    animation: slideFade 35s infinite;
+}
+
+.hero-slider .slide:nth-child(1) { animation-delay: 0s; }
+.hero-slider .slide:nth-child(2) { animation-delay: 5s; }
+.hero-slider .slide:nth-child(3) { animation-delay: 10s; }
+.hero-slider .slide:nth-child(4) { animation-delay: 15s; }
+.hero-slider .slide:nth-child(5) { animation-delay: 20s; }
+.hero-slider .slide:nth-child(6) { animation-delay: 25s; }
+
+@keyframes slideFade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    33% { opacity: 1; }
+    43% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* ==============================
+   HERO WATERMARK
+   ============================== */
+.watermark-hero {
+    position: absolute;
+    bottom: 25px;
+    right: 40px;
+    opacity: 0.25;
+    animation: floatWatermark 8s ease-in-out infinite alternate;
+}
+
+.watermark-hero img {
+    width: 130px;
+    height: auto;
+    filter: brightness(220%) contrast(85%);
+    mix-blend-mode: soft-light;
+    user-select: none;
+    pointer-events: none;
+}
+
+@keyframes floatWatermark {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-8px); }
+}
+
+/* ==============================
+   INTRO SECTION
+   ============================== */
+.intro {
+    background-color: #3B2F2F; 
+    padding: 60px 20px;
+    text-align: center;
+    background-image: 
+        linear-gradient(180deg, rgba(59,47,47,0.9), rgba(59,47,47,0.9)), 
+        url('https://www.transparenttextures.com/patterns/sandpaper.png');
+    background-repeat: repeat; 
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.intro p {
+    max-width: 900px;
+    margin: 10px auto;
+    font-size: 1.1rem;
+    color: #dcdcdc;
+    line-height: 1.6;
+}
+
+/* ==============================
+   TICKET BUTTON
+   ============================== */
+.ticket-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 50px;
+    font-size: 1.15rem;
+    font-family: 'Francois One', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none; 
+    letter-spacing: 0.8px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4a3a3a;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ticket-btn:hover,
+.ticket-btn:focus {
+    background-color: #5c4747;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.30);
+}
+
+.ticket-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.20);
+}
+
+
+/* ==============================
+   SUB NAVIGATION
+   ============================== */
+.subnav {
+    background-color: #EAEAEA;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.subnav ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.subnav li {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.subnav a {
+    font-family: 'Francois One', sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #333333; 
+    transition: color 0.3s ease;
+    font-weight: bold; 
+}
+
+.subnav a:hover {
+    color: #094611;
+}
+
+/* ==============================
+   TRAILER SECTION (INDEX PAGE ONLY)
+   ============================== */
+.trailers {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 50px 10%;
+    background-color: #f5f5f5; 
+    background-image: none;
+    background-repeat: repeat; 
+    scrollbar-color: #7e7373 #575353;
+    scrollbar-width: thin;
+    position: relative;
+    mask-image: linear-gradient(to right, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+}
+
+.trailers a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.trailers figure {
+    flex: 0 0 auto;
+    width: 320px;
+    background-color: #ffffff;
+    border: 5px solid #d8d8d8;
+    border-radius: 10px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trailers figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.trailers img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.trailers figcaption {
+    padding: 15px;
+    font-family: 'Francois One', sans-serif;
+    font-size: 1.1rem;
+    color: #333333; 
+    text-align: center;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+footer {
+    position: relative;
+    background-color: #3B2F2F; 
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 1px solid #333; 
+    font-size: 0.9rem;
+    color: #a5a5a5;
+    background-image: 
+        linear-gradient(180deg, rgba(59,47,47,0.9), rgba(59,47,47,0.9)), 
+        url('https://www.transparenttextures.com/patterns/sandpaper.png');
+    background-repeat: repeat; 
+}
+
+.footer-links {
+    margin-bottom: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.footer-links p {
+    margin: 5px 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.social-icons {
+    margin: 0 20px 0 0; 
+    display: flex; 
+    justify-content: flex-start; 
+    gap: 15px;
+    padding-left: 0; 
+    flex-grow: 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: #a5a5a5; 
+    transition: color 0.3s ease;
+    font-size: 1.5rem; 
+}
+
+.social-icons a:hover {
+    color: #d8c89b;
+}
+
+.social-icons img {
+    display: none; 
+}
+
+.watermark-footer {
+    position: absolute;
+    bottom: 15px;
+    right: 40px; 
+    left: auto;
+    transform: none; 
+    opacity: 0.15;
+}
+
+.watermark-footer img {
+    width: 120px;
+    height: auto;
+    filter: brightness(200%) contrast(80%);
+    mix-blend-mode: soft-light;
+}
+
+footer * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==============================
+   GHIBLI FILMS PAGE STYLES (COMBINED)
+   ============================== */
+
+.ghibli-films-hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #3B2F2F; 
+    box-shadow: inset 0 -100px 50px -50px #3B2F2F; 
+    background-image:
+        linear-gradient(180deg, rgba(59,47,47,0.85), rgba(45,35,35,0.95)), 
+        url('https://www.transparenttextures.com/patterns/dust-bunny.png'); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.ghibli-films-hero .hero-text {
+    display: none; 
+}
+
+.ghibli-films-hero .watermark-hero {
+    position: absolute;
+    bottom: 40px;
+    left: 40px; 
+    opacity: 1; 
+    animation: none;
+    right: auto;
+}
+
+.ghibli-films-hero .watermark-hero img {
+    width: 150px; 
+    height: auto;
+    filter: none;
+    mix-blend-mode: normal;
+}
+
+.films-intro {
+    padding: 30px 20px 40px; 
+    position: relative; 
+    top: auto;
+    z-index: 5; 
+}
+
+.film-gallery {
+    background-color: #f5f5f5;
+    background-image: none; 
+    background-repeat: repeat;
+    padding: 50px 10%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px;
+    justify-items: center; 
+}
+
+.film-gallery a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.film-gallery a:hover {
+    transform: translateY(-5px); 
+    opacity: 0.9;
+}
+
+.film-gallery img {
+    display: block;
+    width: 100%;
+    height: auto; 
+    border-radius: 4px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ==============================
+   NEWS PAGE STYLES 
+   ============================== */
+
+#hero.news-hero {
+    height: 150px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; 
+    z-index: 10;
+    box-shadow: inset 0 -40px 30px -30px rgba(0, 0, 0, 0.3);
+    background-color: #3B2F2F; 
+    padding: 40px 20px;
+    background-image: 
+        linear-gradient(180deg, rgba(59,47,47,0.85), rgba(45,35,35,0.95)), 
+        url('https://www.transparenttextures.com/patterns/dust-bunny.png'); 
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+.news-hero h1 {
+    position: static; 
+    transform: none; 
+    color: #EAEAEA; 
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300; 
+    font-size: 3.2rem; 
+    letter-spacing: 5px; 
+    margin: 0;
+    line-height: 1.2; 
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    max-width: 90%; 
+}
+
+@keyframes fadeInNewsTitle {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.news-section {
+    padding: 40px 10%;
+    background-color: #f5f5f5; 
+    background-image: none; 
+    background-repeat: repeat; 
+}
+
+.latest-news-block {
+    background-color: #fcfcfc; 
+    padding: 30px; 
+    margin-bottom: 30px;
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #eee; 
+}
+
+.latest-news-block h2 {
+    font-family: 'Francois One', sans-serif;
+    color: #2c2c2c; 
+    border-bottom: 3px solid #d8c89b; 
+    padding-bottom: 15px; 
+    margin-top: 0;
+    font-size: 2.2rem; 
+    text-align: center; 
+    margin-bottom: 30px;
+}
+
+.latest-news-block .grid-item {
+    margin-bottom: 25px; 
+}
+
+.latest-news-block .grid-item:last-child {
+    margin-bottom: 0;
+}
+
+.latest-news-block .grid-item h4 {
+    color: #094611; 
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.latest-news-block .grid-item p {
+    color: #444;
+    line-height: 1.7;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; 
+    margin-top: 40px; 
+    text-align: left;
+}
+
+.grid-column {
+    background-color: #ffffff;
+    padding: 25px; 
+    border-radius: 10px; 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); 
+    min-height: 320px; 
+    border: 1px solid #eee;
+}
+
+.grid-column h3 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 1.6rem; 
+    color: #094611; 
+    border-bottom: 3px solid #d8c89b; 
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 25px; 
+    text-align: center;
+}
+
+.grid-item h4 {
+    font-weight: bold;
+    color: #3B2F2F;
+    margin-bottom: 5px;
+    margin-top: 18px; 
+    font-size: 1.1rem;
+}
+
+.grid-item p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+/* ==============================
+   GALLERY PAGE STYLES 
+   ============================== */
+
+#hero.gallery-hero {
+    background-color: #3B2F2F; 
+    background-image: 
+        linear-gradient(180deg, rgba(59,47,47,0.85), rgba(45,35,35,0.95)), 
+        url('https://www.transparenttextures.com/patterns/dust-bunny.png'); 
+    background-attachment: fixed;
+    background-repeat: repeat;
+    height: 150px; 
+    padding: 0; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; 
+    z-index: 10;
+    box-shadow: inset 0 -40px 30px -30px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-hero h1 {
+    color: #EAEAEA; 
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300; 
+    letter-spacing: 6px; 
+    font-size: 3.2rem; 
+    margin: 0;
+    padding: 0;
+}
+
+.subnav {
+    background-color: #EAEAEA;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky; 
+    top: 0;           
+    z-index: 1010;   
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.subnav a {
+    font-family: 'Francois One', sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #2c2c2c; 
+    transition: color 0.3s ease;
+    font-weight: bold; 
+    letter-spacing: 0.5px;
+}
+
+.subnav a:hover{
+    color: #094611; 
+}
+
+.gallery-hero h2 {
+    font-family: 'Cormorant Garamond', serif; 
+    font-weight: 600; 
+    font-size: 2.5rem; 
+    color: #EAEAEA; 
+    margin: 0 0 10px 0; 
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.gallery-hero h3 {
+    font-family: 'Cormorant Garamond', serif; 
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #EAEAEA;
+    margin: 0 0 30px 0;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.gallery-hero h2,
+.gallery-hero h3 {
+    display: none;
+}
+
+.gallery-hero .main-nav {
+    position: static; 
+    width: 100%;
+    background-color: #dcdcdc; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px; 
+    z-index: 1001; 
+}
+
+.gallery-hero .main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    max-width: 900px; 
+}
+
+.gallery-hero .main-nav a {
+    font-family: 'Francois One', sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #2c2c2c; 
+    font-weight: bold; 
+    letter-spacing: 0.5px;
+    padding: 15px 10px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.gallery-hero .main-nav a:hover {
+    color: #094611; 
+}
+
+.subnav { 
+   
+}
+
+.gallery-hero .watermark-hero {
+    display: none;
+}
+
+.gallery-section {
+    padding: 50px 10%;
+    background-color: #FFFFFF; 
+    background-image: none; 
+    background-repeat: repeat; 
+    text-align: center; 
+}
+
+.gallery-item {
+    margin-bottom: 60px; 
+    padding-bottom: 30px;
+    border-bottom: 2px solid #DDDDDD; 
+    text-align: center; 
+}
+
+.gallery-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 800px; 
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    border: 5px solid #F0F0F0; 
+}
+
+.gallery-item h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #3B2F2F; 
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.gallery-item p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4a4a4a; 
+    text-align: center; 
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #4a4a4a; 
+    background-color: #F0F0F0; 
+    border: 1px solid #CCCCCC; 
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a.active, .pagination a:hover {
+    background-color: #DDDDDD; 
+    color: #3B2F2F; 
+    border-color: #BBBBBB;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+   
+    .gallery-hero {
+        height: 120px;
+    }
+    .gallery-hero h1 {
+        font-size: 2.5rem; 
+        letter-spacing: 4px;
+    }
+    .film-gallery {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-links p {
+        text-align: center;
+        flex-grow: 0;
+    }
+    .social-icons {
+        justify-content: center;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .news-hero h1 {
+        font-size: 2.8rem;
+        letter-spacing: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+        letter-spacing: 4px;
+    }
+
+    #hero {
+        height: 80vh; 
+    }
+    .ghibli-films-hero {
+        height: 70vh; 
+    }
+    .news-hero {
+        height: 25vh; 
+    }
+    .news-hero h1 {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+    
+    .gallery-hero {
+        height: 100px; /
+    }
+    .gallery-hero h1 {
+        font-size: 2.2rem; 
+        letter-spacing: 3px;
+    }
+
+    .intro {
+        padding: 40px 15px;
+    }
+
+    .ticket-btn {
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .subnav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .trailers {
+        padding: 30px;
+    }
+    
+    .trailers figure {
+        width: 250px;
+    }
+
+    .watermark-hero,
+    .watermark-footer {
+        display: none; 
+    }
+    
+    .film-gallery {
+        grid-template-columns: repeat(3, 1fr); 
+        padding: 30px 5%;
+    }
+    
+    .footer-links p {
+        text-align: center;
+    }
+    .gallery-item p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+    .news-hero h1 {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+    .latest-news-block h2, .grid-column h3 {
+        font-size: 1.8rem;
+    }
+    .latest-news-block, .grid-column {
+        padding: 20px;
+    }
+    .gallery-hero h1 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+    .gallery-item h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ==============================
+   MERCHANDISE PAGE STYLES
+   ============================== */
+
+#hero.merchandise-hero {
+    height: auto; 
+    padding: 0;
+    background-color: #EAEAEA; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    background-image: none; 
+    background-attachment: scroll;
+    display: block; 
+}
+
+.merchandise-hero .main-nav {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin: 0 auto;
+    height: 50px; 
+    background-color: #dcdcdc; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.merchandise-hero .main-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    max-width: 900px; 
+}
+
+.merchandise-hero .main-nav a {
+    font-family: 'Francois One', sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #2c2c2c;
+    transition: color 0.3s ease;
+    font-weight: bold; 
+    letter-spacing: 0.5px;
+    padding: 15px 10px;
+    display: block;
+    border-bottom: none !important; 
+    padding-bottom: 15px !important; 
+}
+
+.merchandise-hero .main-nav a:hover{
+    color: #094611; 
+    border-bottom: none;
+    padding-bottom: 15px; 
+}
+
+.subnav a:hover {
+    color: #094611; 
+}
+
+.merchandise-search-bar-integrated {
+    background-color: #EAEAEA; 
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+}
+
+.categories-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.categories-nav a {
+    font-family: 'Francois One', sans-serif;
+    text-decoration: none;
+    color: #333333;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.categories-nav a:hover {
+    color: #094611;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #CCCCCC;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    flex-grow: 1;
+    max-width: 400px; 
+    margin: 0 20px;
+}
+
+.search-bar input[type="search"] {
+    border: none;
+    padding: 8px 15px;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.search-bar button:hover {
+    color: #094611;
+}
+
+.sign-in-link {
+    text-decoration: none;
+    color: #3B2F2F;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.sign-in-link:hover {
+    color: #094611;
+}
+
+.merchandise-grid {
+    padding: 30px 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(280px, 400px) minmax(280px, 400px); 
+    gap: 20px;
+    background-color: #FFFFFF;
+    grid-template-areas: 
+        "mugs plushies"
+        "mugs stationery"; 
+}
+
+.mug-item { grid-area: mugs; }
+.plushie-item { grid-area: plushies; }
+.stationery-item { grid-area: stationery; }
+
+.merch-item a {
+    height: 100%; 
+    display: block; 
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.merch-item a:hover {
+    transform: scale(1.01);
+}
+
+.merch-item img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.merch-item figcaption {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Francois One', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #3B2F2F;
+}
+
+.movie-merch-section {
+    background-color: #f5f5f5; 
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.movie-merch-section h2 {
+    color: #094611;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-family: 'Francois One', sans-serif;
+    font-weight: 700;
+}
+
+.movie-merch-gallery {
+    padding: 0; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+}
+
+.movie-merch-gallery a {
+    position: relative;
+    transition: none;
+}
+
+.movie-merch-gallery a:hover {
+    transform: none; 
+    opacity: 1;
+}
+
+.movie-merch-gallery figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff;
+    font-family: 'Francois One', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    border-radius: 0 0 4px 4px;
+}
+
+.movie-merch-gallery a:hover figcaption {
+    opacity: 1; 
+}
+
+.movie-merch-gallery img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ==============================
+   MERCHANDISE BANNERS
+   ============================== */
+
+.top-merch-banner,
+.bottom-merch-banner {
+    width: 100%;
+    overflow: hidden; 
+    margin-bottom: 20px; 
+    background-color: #f0f0f0;
+}
+
+.bottom-merch-banner {
+    margin-top: 40px;
+    margin-bottom: 0; 
+}
+
+.top-merch-banner img,
+.bottom-merch-banner img {
+    display: block; 
+    width: 100%; 
+    height: auto;
+    object-fit: cover; 
+}
+
+.merchandise-hero {
+    margin-top: 0; 
+}
+
+/* ==============================
+   RESPONSIVE DESIGN FOR MERCHANDISE
+   ============================== */
+
+@media (max-width: 1024px) {
+    .merchandise-nav {
+        top: 65px;
+        padding: 10px 3%;
+    }
+    .merchandise-grid {
+        gap: 15px;
+    }
+    .movie-merch-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .merch-item figcaption {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-bar {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* --- MAIN NAVIGATION --- */
+    .main-nav {
+        display: block;
+        width: 100%;
+        padding: 0;
+        background-color: #2b2b2b;
+    }
+
+    .main-nav ul {
+        display: flex;
+        top: 100px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-nav li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .main-nav li a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+
+    /* --- SEARCH + CATEGORIES (now under nav) --- */
+    .merchandise-search-bar-integrated {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 12px;
+        background-color: #f4f4f4;
+        border-top: 2px solid #e0e0e0;
+        height: 100%;
+        position: relative;
+        top: 150px;
+    }
+
+    .categories-nav {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .categories-nav ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding: 8px 0;
+        margin: 0;
+        position: relative;
+        top: auto;
+    }
+
+    .categories-nav li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .search-bar {
+        display: flex;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .search-bar input {
+        flex: 1;
+        padding: 8px;
+        font-size: 0.9rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .search-bar button {
+        padding: 8px 12px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+
+    .sign-in-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 4px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    /* --- MERCHANDISE GRID --- */
+    .merchandise-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px;
+        position: relative;
+        top: auto;
+    }
+
+    .merch-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+    }
+
+    .merch-item figcaption {
+        margin-top: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /* Gallery adjustments for mobile */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .gallery-item {
+        height: 250px;
+    }
+}
+
+
+/* ==============================
+    LOGIN/SIGN UP PAGE STYLES (CORRECTED FOR SLIDESHOW)
+    ============================== */
+
+.login-hero {
+    position: absolute; 
+    text-align: center;
+    overflow: hidden; 
+    height: 100vh; 
+    background-color: #3B2F2F; 
+    background-image: none; 
+    box-shadow: inset 0 -100px 50px -50px #3B2F2F; 
+}
+
+.login-hero .hero-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    overflow: hidden;
+    z-index: 1; 
+}
+
+.login-form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 450px;
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    z-index: 10; 
+}
+
+.form-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.form-tabs a {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-family: 'Francois One', sans-serif;
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.form-tabs .active-tab {
+    color: #094611; 
+    border-bottom: 3px solid #094611;
+    font-weight: bold;
+}
+
+.back-to-home {
+    flex-grow: 0.1;
+    font-size: 1.3rem;
+    color: #3B2F2F;
+    border-bottom: none !important;
+}
+.back-to-home:hover {
+    color: #094611;
+}
+
+.auth-form h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #3B2F2F;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group label i {
+    margin-right: 8px;
+    color: #3B2F2F;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #094611;
+    outline: none;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #094611; 
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Francois One', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-btn:hover {
+    background-color: #06300b;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #4a4a4a;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.forgot-password:hover {
+    color: #094611;
+}
+
+.hidden-form {
+    display: none;
+}
+.active-form {
+    animation: formFadeIn 0.5s ease-out;
+}
+
+@keyframes formFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 500px) {
+    .login-form-container {
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+        max-width: 100%;
+        height: 100%;
+    }
+    .form-tabs {
+        margin-bottom: 15px;
+    }
+}
+
+/* ==============================
+    FILMS PAGE RATING STYLES
+    ============================== */
+
+.film-gallery .film-item {
+    position: relative; 
+    display: block; 
+    overflow: hidden;
+}
+
+.film-item .film-poster-link {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.film-item:hover .film-poster-link {
+    opacity: 0.1; 
+    pointer-events: none; 
+}
+
+.rating-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+    pointer-events: none; 
+    flex-direction: column;
+}
+
+.film-item:hover .rating-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.rating-form {
+    padding: 20px 10px;
+    width: 90%;
+}
+
+.rating-form p {
+    font-size: 1.1rem;
+    color: #3B2F2F;
+    margin-bottom: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.stars input[type="radio"] { 
+    display: none;
+}
+
+.stars label {
+    font-size: 1.8rem; 
+    color: #CCCCCC;
+    cursor: pointer;
+    margin: 0 2px;
+    transition: color 0.2s;
+}
+
+.stars label::before {
+    content: "\f005"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #FFD700;
+}
+
+.rating-form {
+    padding: 10px 5px; 
+    width: 95%; 
+}
+
+.rating-form p {
+    font-size: 1rem;
+    color: #3B2F2F;
+    margin-bottom: 10px; 
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+.stars input[type="radio"]:checked ~ label {
+    color: #FFD700; 
+}
+
+.submit-rating-btn {
+    background-color: #094611; 
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Francois One', sans-serif;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.submit-rating-btn:hover {
+    background-color: #06300b;
+}
+
+@media (max-width: 768px) {
+    .stars label {
+        font-size: 1.8rem;
+    }
+}
+
+/* ==============================
+    PHYSICAL STORES MAP STYLES
+    ============================== */
+
+.physical-stores-map {
+    padding: 30px 5%;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin-top: 20px;
+    margin-bottom: 50px; 
+}
+
+.physical-stores-map h2 {
+    color: #094611; 
+    margin-bottom: 25px;
+    font-size: 2rem;
+     font-family: 'Francois One', sans-serif;
+    font-weight: 700;
+}
+
+#physical-store-map-embed {
+    width: 90%; 
+    max-width: 900px; 
+    height: 450px; 
+    margin: 0 auto; 
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    overflow: hidden; 
+    background-color: #e0e0e0; 
+}
+
+#physical-store-map-embed iframe {
+    width: 100%; 
+    height: 100%; 
+    display: block;
+}
+
+/* ==============================
+   LOGIN PAGE MOBILE & TABLET STYLES
+   ============================== */
+
+@media (max-width: 1024px) {
+    /* Tablet Styles */
+    .login-hero {
+        height: 100vh;
+    }
+    
+    .login-form-container {
+        width: 85%;
+        max-width: 500px;
+        padding: 35px;
+    }
+    
+    .auth-form h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-tabs a {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+    
+    .input-group input {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+    
+    .auth-btn {
+        padding: 16px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Styles */
+    .login-hero {
+        height: 100vh;
+        background-attachment: scroll;
+    }
+    
+    .login-form-container {
+        width: 95%;
+        max-width: none;
+        padding: 25px 20px;
+        border-radius: 0;
+        box-shadow: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin: 0 auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .form-tabs {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    
+    .form-tabs a {
+        padding: 15px 0;
+        font-size: 1.1rem;
+        border-bottom: 2px solid #ddd;
+    }
+    
+    .form-tabs .active-tab {
+        border-bottom: 3px solid #094611;
+    }
+    
+    .back-to-home {
+        order: -1;
+        padding: 10px 0;
+        font-size: 1.4rem;
+    }
+    
+    .auth-form h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    
+    .input-group {
+        margin-bottom: 15px;
+    }
+    
+    .input-group label {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .input-group input {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .auth-btn {
+        padding: 14px;
+        font-size: 1.1rem;
+        margin-top: 15px;
+    }
+    
+    .forgot-password {
+        font-size: 0.95rem;
+        margin-top: 12px;
+    }
+    
+    /* Adjust hero slider for mobile */
+    .login-hero .hero-slider {
+        position: fixed;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small Mobile Styles */
+    .login-form-container {
+        padding: 20px 15px;
+    }
+    
+    .auth-form h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    
+    .form-tabs a {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+    
+    .input-group label {
+        font-size: 0.95rem;
+    }
+    
+    .input-group input {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    
+    .auth-btn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .forgot-password {
+        font-size: 0.9rem;
+    }
+}
+
+/* Landscape Mobile Optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+    .login-form-container {
+        justify-content: flex-start;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        overflow-y: auto;
+        max-height: 100vh;
+    }
+    
+    .form-tabs {
+        flex-direction: row;
+    }
+    
+    .form-tabs a {
+        padding: 10px 0;
+    }
+}
+
+/* High DPI Screens */
+@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), 
+       (max-width: 768px) and (min-resolution: 192dpi) {
+    .login-form-container {
+        background-color: rgba(255, 255, 255, 0.98);
+    }
+}

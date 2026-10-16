@@ -1,0 +1,67 @@
+/* films-styles.css */
+
+/* This CSS file handles the unique hero for the ghibli-films.html page */
+
+/* Film Hero: Full screen height with Howl's Moving Castle style */
+.ghibli-films-hero {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    /* Set height to 100vh for a large header, as requested */
+    height: 100vh;
+    
+    /* Image background styles */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* ADDED: Dark gradient overlay for text readability, blending into the intro section (dark brown) */
+    box-shadow: inset 0 -100px 50px -50px #3B2F2F; 
+    
+    /* Overriding any previous textured background */
+    background-image: none !important;
+    background-color: #3B2F2F; 
+}
+
+/* Re-center the text for the films hero */
+.ghibli-films-hero .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300; 
+    letter-spacing: 6px; 
+    animation: none; 
+}
+
+.ghibli-films-hero .hero-text h1 {
+    font-size: 3.2rem;
+    margin: 0;
+    line-height: 1.1;
+}
+
+/* Films Hero Logo (If you want the logo stamp on this page, too) */
+.ghibli-films-hero .watermark-hero {
+    position: absolute;
+    bottom: 40px;
+    left: 40px; 
+    opacity: 1; 
+    animation: none;
+}
+
+.ghibli-films-hero .watermark-hero img {
+    width: 150px; 
+    height: auto;
+    filter: none;
+    mix-blend-mode: normal;
+}
+
+/* Adjustments for smaller header on mobile */
+@media (max-width: 768px) {
+    .ghibli-films-hero {
+        height: 70vh; 
+    }
+}
